@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  bind:
+    build: .
+    environment:
+      - ROOT_PASSWORD=ubuntu
+    
+    volumes:
+      - ./volumes/data:/data:rw
+      - ./volumes/network:/etc/network/:rw
+    privileged: true
+    container_name: dns_bind_tp6
+    networks:
+      DNSnetwork:
+        ipv4_address: 192.168.2.5
+        ipv6_address: 2001:a:a:a::2
+
+networks:
+  DNSnetwork:
+    driver: "bridge"
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.2.0/24
+        - subnet: 2001:a:a:a::/64
