@@ -6,3 +6,7 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+zone "grupo19.redes.fcefyn.unc.edu.local" {
+	type master;
+	file "/var/lib/bind/grupo19.redes.fcefyn.unc.edu.local.hosts";
+	};

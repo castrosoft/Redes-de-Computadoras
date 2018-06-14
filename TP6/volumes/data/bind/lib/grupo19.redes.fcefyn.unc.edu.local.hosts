@@ -1,0 +1,10 @@
+$ttl 38400
+grupo19.redes.fcefyn.unc.edu.local.	IN	SOA	65c8aa69f855. castro\.fcefyn.gmail.com. (
+			1528370296
+			10800
+			3600
+			604800
+			38400 )
+grupo19.redes.fcefyn.unc.edu.local.	IN	NS	65c8aa69f855.
+cliente.grupo19.redes.fcefyn.unc.edu.local.	IN	AAAA	2001:a:a:a::2
+servidor.grupo19.redes.fcefyn.unc.edu.local.	IN	AAAA	2001:a:a:a::1
